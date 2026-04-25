@@ -10,7 +10,16 @@ import imgFollaje from './assets/follaje.jpg'
 import imgPlantas from './assets/plantas.jpg'
 import imgPanel from './assets/panel.jpg'
 import imgDeck from './assets/deck.jpg'
-const WA = 'https://wa.me/526681670464'
+
+const PHONE = '526681670464'
+
+const getWhatsAppLink = (interest = 'recibir información') => {
+  const message = encodeURIComponent(
+    `Hola, vi su página web de Hábitat 360 y me interesa ${interest}. ¿Podrían darme información y cotización?`
+  )
+
+  return `https://wa.me/${PHONE}?text=${message}`
+}
 
 const services = [
   {
@@ -175,79 +184,80 @@ function App() {
       </header>
 
       {/* HERO */}
-<section style={{ background: 'linear-gradient(140deg,#111111 0%,#1a2614 55%,#243320 100%)', color: '#fff', padding: '80px 24px 100px' }}>
-  <div
-    className="hero-grid"
-    style={{
-      maxWidth: 1200,
-      margin: '0 auto',
-      display: 'grid',
-      gridTemplateColumns: '1fr 620px', // 🔥 +20% aprox
-      gap: 56,
-      alignItems: 'center'
-    }}
-  >
-    <div>
-      <div style={{ display: 'inline-block', background: 'rgba(44, 68, 35, 0.13)', border: '1px solid rgba(126,195,84,0.28)', color: '#7ec354', fontSize: 11, letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 700, padding: '5px 14px', borderRadius: 20, marginBottom: 20 }}>
-        Construcción &amp; Exteriorismo Premium
-      </div>
+      <section style={{ background: 'linear-gradient(140deg,#111111 0%,#1a2614 55%,#243320 100%)', color: '#fff', padding: '80px 24px 100px' }}>
+        <div
+          className="hero-grid"
+          style={{
+            maxWidth: 1200,
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '1fr 620px',
+            gap: 56,
+            alignItems: 'center'
+          }}
+        >
+          <div>
+            <div style={{ display: 'inline-block', background: 'rgba(44, 68, 35, 0.13)', border: '1px solid rgba(126,195,84,0.28)', color: '#7ec354', fontSize: 11, letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 700, padding: '5px 14px', borderRadius: 20, marginBottom: 20 }}>
+              Construcción &amp; Exteriorismo Premium
+            </div>
 
-      <h1 style={{ fontSize: 54, lineHeight: 1.06, fontWeight: 800, marginBottom: 20, color: 'green' }}>
-        Construimos y renovamos <br />espacios que elevan <br />
-        <span style={{ color: '#f2f9ee' }}>tu estilo de vida </span>
-      </h1>
+            <h1 style={{ fontSize: 54, lineHeight: 1.06, fontWeight: 800, marginBottom: 20, color: 'green' }}>
+              Construimos y renovamos <br />espacios que elevan <br />
+              <span style={{ color: '#f2f9ee' }}>tu estilo de vida </span>
+            </h1>
 
-      <p style={{ fontSize: 17, lineHeight: 1.8, color: 'rgba(255,255,255,0.68)', maxWidth: 520, marginBottom: 32 }}>
-        Convierte tu hogar en el lugar donde todos quieren estar.
-      </p>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: 'rgba(255,255,255,0.68)', maxWidth: 520, marginBottom: 32 }}>
+              Convierte tu hogar en el lugar donde todos quieren estar.
+            </p>
 
-      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-        <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-wa">
-          <WaIcon /> Cotizar por WhatsApp
-        </a>
-        <a href="#servicios" className="btn-outline">Ver servicios</a>
-      </div>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <a href={getWhatsAppLink('cotizar un proyecto de construcción, remodelación o exteriorismo')} target="_blank" rel="noopener noreferrer" className="btn-wa">
+                <WaIcon /> Cotizar por WhatsApp
+              </a>
+              <a href="#servicios" className="btn-outline">Ver servicios</a>
+            </div>
 
-      <div style={{ display: 'flex', gap: 20, marginTop: 36, flexWrap: 'wrap' }}>
-        {['Ingeniería civil certificada', 'Especialistas en pasto sintético', 'Atención en Los Mochis'].map(t => (
-          <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 13, color: 'rgba(255,255,255,0.55)' }}>
-            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#7ec354', flexShrink: 0 }} />
-            {t}
+            <div style={{ display: 'flex', gap: 20, marginTop: 36, flexWrap: 'wrap' }}>
+              {['Ingeniería civil certificada', 'Especialistas en pasto sintético', 'Atención en Los Mochis'].map(t => (
+                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 13, color: 'rgba(255,255,255,0.55)' }}>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#7ec354', flexShrink: 0 }} />
+                  {t}
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-    <div
-      className="hero-logo"
-      style={{
-        background: 'rgba(255,255,255,0.06)',
-        border: '1px solid rgba(255,255,255,0.11)',
-        borderRadius: 24,
-        padding: 16,
-        width: '100%'
-      }}
-    >
-      <img
-        src={logo}
-        alt="Hábitat 360"
-        style={{
-          width: '100%',
-          height: 400, // 🔥 antes 340 → ahora más grande
-          objectFit: 'cover',
-          borderRadius: 18,
-          display: 'block',
-          background: '#fff'
-        }}
-      />
+          <div
+            className="hero-logo"
+            style={{
+              background: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.11)',
+              borderRadius: 24,
+              padding: 16,
+              width: '100%'
+            }}
+          >
+            <img
+              src={logo}
+              alt="Hábitat 360"
+              style={{
+                width: '100%',
+                height: 400,
+                objectFit: 'cover',
+                borderRadius: 18,
+                display: 'block',
+                background: '#fff'
+              }}
+            />
 
-      <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Los Mochis, Sin.</span>
-        <span style={{ fontSize: 11, color: '#7ec354', fontWeight: 700 }}>6+ años</span>
-      </div>
-    </div>
-  </div>
-</section>
+            <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between' }}>
+              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Los Mochis, Sin.</span>
+              <span style={{ fontSize: 11, color: '#7ec354', fontWeight: 700 }}>6+ años</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* STATS */}
       <section style={{ background: '#fff', borderBottom: '1px solid #e8e5dc' }}>
         <div className="stat-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
@@ -281,7 +291,7 @@ function App() {
                   <h3 style={{ fontSize: 24, fontWeight: 800, marginBottom: 10 }}>{s.title}</h3>
                   <p style={{ fontSize: 14, lineHeight: 1.75, color: '#666' }}>{s.description}</p>
                 </div>
-                <a href={WA} target="_blank" rel="noopener noreferrer" className="card-link">
+                <a href={getWhatsAppLink(`el servicio de ${s.title}`)} target="_blank" rel="noopener noreferrer" className="card-link">
                   Solicitar cotización <span style={{ fontSize: 16 }}>→</span>
                 </a>
               </div>
@@ -310,15 +320,15 @@ function App() {
                     <span style={{ background: '#edf3e8', color: '#27500a', fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 20, whiteSpace: 'nowrap', marginLeft: 8, flexShrink: 0 }}>{p.badge}</span>
                   </div>
                   <p style={{ fontSize: 13, lineHeight: 1.7, color: '#666', marginBottom: 14 }}>{p.description}</p>
-                  <a href={WA} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: '#25d366', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5 }}>
-                    <WaIcon size={14} color="#25d366" /> Consultar precio
+                  <a href={getWhatsAppLink(`el producto ${p.title}`)} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: '#25d366', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5 }}>
+                    <WaIcon size={14} /> Consultar precio
                   </a>
                 </div>
               </div>
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-dark">
+            <a href={getWhatsAppLink('conocer precios y disponibilidad de sus productos')} target="_blank" rel="noopener noreferrer" className="btn-dark">
               <WaIcon /> Consultar todos los productos
             </a>
           </div>
@@ -333,7 +343,7 @@ function App() {
               <div style={{ ...tagStyle, color: '#7ec354' }}>Proyectos</div>
               <h2 className="section-title" style={{ ...titleStyle, color: '#fff' }}>Más de 6 años transformando Los Mochis</h2>
             </div>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-wa"><WaIcon /> Quiero un proyecto</a>
+            <a href={getWhatsAppLink('iniciar un proyecto con Hábitat 360')} target="_blank" rel="noopener noreferrer" className="btn-wa"><WaIcon /> Quiero un proyecto</a>
           </div>
           <div className="proy-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1 }}>
             {projects.map(p => (
@@ -357,7 +367,7 @@ function App() {
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.62)', lineHeight: 1.8, maxWidth: 500, margin: '16px auto 32px' }}>
             Escríbenos y en minutos te damos orientación, cotización y opciones reales para tu proyecto.
           </p>
-          <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-wa" style={{ fontSize: 16, padding: '16px 36px' }}>
+          <a href={getWhatsAppLink('recibir asesoría para transformar mi espacio')} target="_blank" rel="noopener noreferrer" className="btn-wa" style={{ fontSize: 16, padding: '16px 36px' }}>
             <WaIcon /> Hablar ahora · 668 167 0464
           </a>
         </div>
@@ -370,7 +380,7 @@ function App() {
       </footer>
 
       {/* BOTÓN FLOTANTE WHATSAPP */}
-      <a href={WA} target="_blank" rel="noopener noreferrer" className="wa-float" title="Escríbenos por WhatsApp">
+      <a href={getWhatsAppLink('hacer una consulta rápida')} target="_blank" rel="noopener noreferrer" className="wa-float" title="Escríbenos por WhatsApp">
         <WaIcon size={28} />
       </a>
     </div>
