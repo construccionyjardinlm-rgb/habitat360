@@ -1,15 +1,15 @@
-import logo from './assets/logo.jpeg'
+import logo from './assets/logo1.jpeg'
 
-import imgConstruccion from './assets/construccion1.jpg'
-import imgExteriorismo from './assets/exteriorismo.jpg'
-import imgRemodelaciones from './assets/remodelaciones.jpeg'
+import imgConstruccion from './assets/construccion.jpg'
+import imgExteriorismo from './assets/exteriorismo1.jpg'
+import imgRemodelaciones from './assets/remodelaciones1.jpeg'
 
-import imgPasto from './assets/pasto-sintetico.jpeg'
-import imgLambrin from './assets/lambrin1.jpg'
-import imgFollaje from './assets/follaje-sintetico.jpg'
-import imgPlantas from './assets/plantas-sinteticas.jpg'
-import imgPanel from './assets/panel-pvc.jpg'
-import imgDeck from './assets/deck-sintetico.jpg'
+import imgPasto from './assets/pasto.jpeg'
+import imgLambrin from './assets/lambrin.jpg'
+import imgFollaje from './assets/follaje.jpg'
+import imgPlantas from './assets/plantas.jpg'
+import imgPanel from './assets/panel.jpg'
+import imgDeck from './assets/deck.jpg'
 const WA = 'https://wa.me/526681670464'
 
 const services = [
