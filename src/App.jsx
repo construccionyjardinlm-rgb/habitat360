@@ -1,6 +1,6 @@
 import logo from './assets/logo.jpeg'
 
-import imgConstruccion from './assets/construccion.jpg'
+import imgConstruccion from './assets/construccion1.jpg'
 import imgExteriorismo from './assets/exteriorismo.jpg'
 import imgRemodelaciones from './assets/remodelaciones.jpeg'
 
