@@ -5,7 +5,7 @@ import imgExteriorismo from './assets/exteriorismo.jpg'
 import imgRemodelaciones from './assets/remodelaciones.jpeg'
 
 import imgPasto from './assets/pasto-sintetico.jpeg'
-import imgLambrin from './assets/lambrin.jpg'
+import imgLambrin from './assets/lambrin1.jpg'
 import imgFollaje from './assets/follaje-sintetico.jpg'
 import imgPlantas from './assets/plantas-sinteticas.jpg'
 import imgPanel from './assets/panel-pvc.jpg'
