@@ -1,4 +1,4 @@
-import logo from './assets/logo1.jpeg'
+import logo from './assets/logo.png'
 
 import imgConstruccion from './assets/construccion.jpg'
 import imgExteriorismo from './assets/exteriorismo1.jpg'
@@ -175,45 +175,79 @@ function App() {
       </header>
 
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(140deg,#111111 0%,#1a2614 55%,#243320 100%)', color: '#fff', padding: '80px 24px 100px' }}>
-        <div className="hero-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 380px', gap: 56, alignItems: 'center' }}>
-          <div>
-            <div style={{ display: 'inline-block', background: 'rgba(44, 68, 35, 0.13)', border: '1px solid rgba(126,195,84,0.28)', color: '#7ec354', fontSize: 11, letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 700, padding: '5px 14px', borderRadius: 20, marginBottom: 20 }}>
-              Construcción &amp; Exteriorismo Premium
-            </div>
-          
-            <h1 style={{ fontSize: 54, lineHeight: 1.06, fontWeight: 800, marginBottom: 20 , color:'green'}}>
-              Tu exterior,<br />tu mejor carta<br />
-              <span style={{ color: '#f2f9ee' }}>de presentación</span>
-            </h1>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: 'rgba(255,255,255,0.68)', maxWidth: 520, marginBottom: 32 }}>
-              Pasto sintético, jardines, lambrín, deck, remodelaciones y construcción con acabados premium para hogares y negocios en Los Mochis.
-            </p>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-wa">
-                <WaIcon /> Cotizar por WhatsApp
-              </a>
-              <a href="#servicios" className="btn-outline">Ver servicios</a>
-            </div>
-            <div style={{ display: 'flex', gap: 20, marginTop: 36, flexWrap: 'wrap' }}>
-              {['Ingeniería civil certificada', 'Especialistas en pasto sintético', 'Atención en Los Mochis'].map(t => (
-                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 13, color: 'rgba(255,255,255,0.55)' }}>
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#7ec354', flexShrink: 0 }} />
-                  {t}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="hero-logo" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.11)', borderRadius: 20, padding: 20 }}>
-            <img src={logo} alt="Hábitat 360" style={{ width: '100%', borderRadius: 12, display: 'block', background: '#fff', padding: 16 }} />
-            <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Los Mochis, Sin.</span>
-              <span style={{ fontSize: 11, color: '#7ec354', fontWeight: 700 }}>6+ años</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<section style={{ background: 'linear-gradient(140deg,#111111 0%,#1a2614 55%,#243320 100%)', color: '#fff', padding: '80px 24px 100px' }}>
+  <div
+    className="hero-grid"
+    style={{
+      maxWidth: 1200,
+      margin: '0 auto',
+      display: 'grid',
+      gridTemplateColumns: '1fr 620px', // 🔥 +20% aprox
+      gap: 56,
+      alignItems: 'center'
+    }}
+  >
+    <div>
+      <div style={{ display: 'inline-block', background: 'rgba(44, 68, 35, 0.13)', border: '1px solid rgba(126,195,84,0.28)', color: '#7ec354', fontSize: 11, letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 700, padding: '5px 14px', borderRadius: 20, marginBottom: 20 }}>
+        Construcción &amp; Exteriorismo Premium
+      </div>
 
+      <h1 style={{ fontSize: 54, lineHeight: 1.06, fontWeight: 800, marginBottom: 20, color: 'green' }}>
+        Construimos y renovamos <br />espacios que elevan <br />
+        <span style={{ color: '#f2f9ee' }}>tu estilo de vida </span>
+      </h1>
+
+      <p style={{ fontSize: 17, lineHeight: 1.8, color: 'rgba(255,255,255,0.68)', maxWidth: 520, marginBottom: 32 }}>
+        Convierte tu hogar en el lugar donde todos quieren estar.
+      </p>
+
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+        <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-wa">
+          <WaIcon /> Cotizar por WhatsApp
+        </a>
+        <a href="#servicios" className="btn-outline">Ver servicios</a>
+      </div>
+
+      <div style={{ display: 'flex', gap: 20, marginTop: 36, flexWrap: 'wrap' }}>
+        {['Ingeniería civil certificada', 'Especialistas en pasto sintético', 'Atención en Los Mochis'].map(t => (
+          <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 13, color: 'rgba(255,255,255,0.55)' }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#7ec354', flexShrink: 0 }} />
+            {t}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div
+      className="hero-logo"
+      style={{
+        background: 'rgba(255,255,255,0.06)',
+        border: '1px solid rgba(255,255,255,0.11)',
+        borderRadius: 24,
+        padding: 16,
+        width: '100%'
+      }}
+    >
+      <img
+        src={logo}
+        alt="Hábitat 360"
+        style={{
+          width: '100%',
+          height: 400, // 🔥 antes 340 → ahora más grande
+          objectFit: 'cover',
+          borderRadius: 18,
+          display: 'block',
+          background: '#fff'
+        }}
+      />
+
+      <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between' }}>
+        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Los Mochis, Sin.</span>
+        <span style={{ fontSize: 11, color: '#7ec354', fontWeight: 700 }}>6+ años</span>
+      </div>
+    </div>
+  </div>
+</section>
       {/* STATS */}
       <section style={{ background: '#fff', borderBottom: '1px solid #e8e5dc' }}>
         <div className="stat-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
